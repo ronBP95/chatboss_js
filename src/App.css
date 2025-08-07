@@ -38,9 +38,10 @@
 }
 
 .chatBox {
-  /* background-color: red; */
+  background-color: #FAF2F0;
   height: 70%;
   color: black;
+  overflow-y: auto;
 }
 
 .time {
