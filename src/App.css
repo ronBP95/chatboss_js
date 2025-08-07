@@ -3,4 +3,50 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  height: 100%;
+}
+
+.parentContainer {
+  background-color: white;
+  width: 450px;
+  height: 500px;
+}
+
+.userName {
+  background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+  display: flex;
+  justify-content:space-between;
+  flex-direction: row;
+  padding: 1em;
+  border-bottom: 1px;
+}
+
+.userIcons {
+  display: flex;
+}
+
+.userText {
+  font-size: 15pt;
+  margin-left: 7.5px;
+}
+
+.userButtons {
+  margin: 5px;
+  display: flex;
+  width: 15%;
+  justify-content: space-around;
+}
+
+.chatBox {
+  background-color: red;
+  height: 70%;
+}
+
+.chatInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  border-top: 2px solid black;
+  height: 16%;
 }
