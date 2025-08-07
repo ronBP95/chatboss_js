@@ -1,10 +1,30 @@
 import './App.css'
+import { useState, useEffect } from 'react';
 
 // Icon Imports
 import { HiUserCircle, HiDotsVertical } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
+import { BsFillSendFill } from "react-icons/bs";
+
+// useState
 
 function App() {
+
+  const [currentDateTime, setCurrentDateTime] = useState(new Date());
+
+  useEffect(() => {
+    const timerId = setInterval(() => {
+      setCurrentDateTime(new Date());
+    }, 1000); // Update every second
+
+    // Cleanup function to clear the interval when the component unmounts
+    return () => {
+      clearInterval(timerId);
+    };
+  }, []); // Empty dependency array ensures this effect runs only once on mount
+
+  const [text, setText] = useState("");
+
   return (
     <>
       <div className="parentContainer">
@@ -20,10 +40,17 @@ function App() {
             </div>
             
             <div className="chatBox">
-              Chat Content
+      <div className='time'>{currentDateTime.toLocaleTimeString()}</div>
             </div>
             <div className="chatInput">
-              Chat Input
+                <input 
+                 type='text'
+                 placeholder='Write your message here!'
+                 style={{ fontSize: '11pt' }}
+                />
+                <div className="buttons">
+                  <BsFillSendFill size="2em"/>  
+                </div>
             </div>
       </div>
     </>

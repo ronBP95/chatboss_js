@@ -38,15 +38,37 @@
 }
 
 .chatBox {
-  background-color: red;
+  /* background-color: red; */
   height: 70%;
+  color: black;
+}
+
+.time {
+  color: gray;
 }
 
 .chatInput {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: green;
+  /* background-color: green; */
   border-top: 2px solid black;
   height: 16%;
+  color: rgba(42, 123, 155, 1)
+}
+
+.chatInput input {
+  width: 75%;
+  height: 45%;
+  background: white;
+  font: 72pt;
+  color: black;
+  margin: 0.75em;
+  padding: 0.5em;
+  border-radius: 25px;
+}
+
+.buttons:hover {
+  color: black;
+  transition: background-color 0.5s ease, color 0.5s ease; /* Apply transition to base state */
 }
