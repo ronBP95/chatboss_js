@@ -33,7 +33,7 @@ const handleSend = async () => {
   addMessage("user", input);
 
   try {
-    const res = await fetch("http://127.0.0.1:5000/chat", {
+    const res = await fetch("https://chatboss-qj18.onrender.com/chat", {
       method: "POST",
       mode: "cors",
       headers: {
